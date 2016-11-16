@@ -1,0 +1,13 @@
+<h1>Packages</h1>
+
+  @foreach(var package in Model)
+  {
+    <p>Weight: @package.GetWeight()</p>
+    <p>Height: @package.GetHeight()</p>
+    <p>Length: @package.GetLength()</p>
+    <p>Width: @package.GetWidth()</p>
+  }
+<p><a href="/">Add another package</a></p>
+<form action="/packages_cleared" method="post">
+  <button type="submit" name="button">Clear all packages</button>
+</form>
